@@ -1,0 +1,45 @@
+<html>
+    <head>
+    <script type="application/javascript" src="/jquery-1.8.2.js"></script>
+    <script type="application/javascript" src="/handlebars-1.0.0.beta.6.js"></script>
+    <script type="application/javascript" src="/Class.js"></script>
+    <script type="application/javascript" src="/Base.js"></script>
+    <script type="application/javascript" src="/Widget.js"></script>
+    <script type="application/javascript" src="/TemplateProvider.js"></script>
+    <script type="application/javascript" src="/WidgetWithTemplate.js"></script>
+    <script type="application/javascript" src="/addToCartWidget.js"></script>
+    <script type="application/javascript" src="/headerWidget.js"></script>
+    <script type="application/javascript" src="/customerDetailsWidget.js"></script>
+    <script type="application/javascript" src="/newWidget.js"></script>
+    <script type="application/javascript" src="/Navigate.js"></script>    
+    <!--<script type="application/javascript" src="/ContactWidget.js"></script>
+    <script type="application/javascript" src="/TestScoreWidget.js"></script>
+    <script type="application/javascript" src="/UISwitchListener.js"></script>
+    <script type="application/javascript" src="/contact.json"></script>-->
+
+    </head>
+
+    <body>
+    <script>
+        document.config = {
+            data: {
+            "name" : "Karan"}
+        }
+    </script>
+        
+        <div id="addToCartWidgetContainer"></div>
+        
+        <script type="application/javascript">
+            $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser
+
+                // create your Navigate object
+                // assign to document
+                // document.Navigate = 
+                
+                var addToCartWidget = new Clazz.addToCartWidget(document.config);
+                var addToCartWidgetContainer = document.getElementById("addToCartWidgetContainer");
+                addToCartWidget.render(addToCartWidgetContainer);
+            });
+        </script>
+    </body>
+</html>

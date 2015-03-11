@@ -7,7 +7,7 @@ Clazz.genericNavigate = Clazz.extend(Clazz.Base,{
 	 Navigate : function(tamplateContainer,replacingTemplate,config,widget){
 		
 		window.location.hash = "widget"
-        
+   
 /*		var tamplateContainer= document.getElementBId("tamplateContainer");
 		$(tamplateContainer).display= 'none';
     
@@ -17,7 +17,7 @@ Clazz.genericNavigate = Clazz.extend(Clazz.Base,{
 
 		
 
-		}
+		},
 	});
 
 

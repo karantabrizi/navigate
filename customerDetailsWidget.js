@@ -3,17 +3,18 @@ Clazz.customerDetailsWidget = Clazz.extend(
         
         initialize : function(config){
             this.templateUrl = "customerDetailsWidgetContainer.html";
-            this.config = data;
+            this.config = config;
         },
     
         bindUI: function() {
-            this = self;
+            //this = self;
     
             var y = function() {
-                document.Navigate.Navigate("customerDetailsWidgetContainer",
+                document.Navigate("customerDetailsWidgetContainer",
                                            "newWidgetContainer",config,"newWidget")};
-            };
+            
     
             $("#forwardButton").click(y);
+            }
         }
 );

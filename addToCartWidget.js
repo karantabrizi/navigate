@@ -9,15 +9,12 @@ Clazz.addToCartWidget = Clazz.extend(  //extend will add the two together
         
         postRender : function(){
         var customerDetailsWidget = new Clazz.customerDetailsWidget (this.data);
-                var customerDetailsWidgetContainer = document.getElementById("customerDetailsWidgetContainer");
-                customerDetailsWidget.render(customerDetailsWidgetContainer);
-            customerDetailsWidget.myFunction(function(tamplateContainer,replacingTemplate,config,widget){
-            window.location.hash = widget
-            });
+        var customerDetailsWidgetContainer = document.getElementById("customerDetailsWidgetContainer");
+            customerDetailsWidget.render(customerDetailsWidgetContainer);
+            
         var headerWidget = new Clazz.headerWidget (this.data);
-                var headerWidgetContainer = document.getElementById("headerWidgetContainer");
-                headerWidget.render(headerWidgetContainer);
-        var Navigate = new Clazz.Navigate(this.data);
+        var headerWidgetContainer = document.getElementById("headerWidgetContainer");
+            headerWidget.render(headerWidgetContainer);
     
         }
     });

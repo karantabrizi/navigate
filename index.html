@@ -32,9 +32,8 @@
         <script type="application/javascript">
             $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser
 
-                // create your Navigate object
-                // assign to document
-                // document.Navigate = 
+                var Navigate = new Clazz.Navigate()
+                document.Navigate = Navigate.Navigate
                 
                 var addToCartWidget = new Clazz.addToCartWidget(document.config);
                 var addToCartWidgetContainer = document.getElementById("addToCartWidgetContainer");

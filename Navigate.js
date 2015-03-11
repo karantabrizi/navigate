@@ -2,11 +2,11 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
 
     initialize: function(config){
     this.config= config;
-    }
+    },
     
 	Navigate : function(tamplateContainer,replacingTemplate,config,widget){
-		
-		window.location.hash = "widget"
+		console.log("hi");
+		//window.location.hash = "widget"
         
 /*		var tamplateContainer= document.getElementBId("tamplateContainer");
 		$(tamplateContainer).display= 'none';
@@ -17,7 +17,7 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
 
 		
 
-		}
+		},
 	});
 
 

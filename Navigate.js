@@ -1,10 +1,10 @@
-Clazz.genericNavigate = Clazz.extend(Clazz.Base,{
+Clazz.Navigate = Clazz.extend(Clazz.Base,{
 
     initialize: function(config){
     this.config= config;
     },
     
-	 Navigate : function(tamplateContainer,replacingTemplate,config,widget){
+	 Navigate : function(tamplateContainer,replacingTemplate,widget){
 		
 		window.location.hash = "widget"
    

@@ -8,19 +8,24 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
 		
 		window.location.hash = widgetName
         
-        console.log(tamplateContainer);
-        console.log(replacingTemplate);
-        console.log(widget);
-         
-		var tamplateContainer= document.getElementById(tamplateContainer);
-		tamplateContainer.style.display= 'none';
-
-		var replacingTemplate= document.getElementById(replacingTemplate);
-		widget.render(replacingTemplate); 
-
-		
-
+        
+        if(document.history.indexOf(widgetName)===-1){
+                document.history.push(widgetName);
+                
+                var tamplateContainer= document.getElementById(tamplateContainer);
+                tamplateContainer.style.display= 'none';
+        
+                var replacingTemplate= document.getElementById(replacingTemplate);
+                widget.render(replacingTemplate); 
+        }
+        else {
+            var tamplateContainer= document.getElementById(tamplateContainer);
+            tamplateContainer.style.display= 'none';
+            
+            var replacingTemplate= document.getElementById(replacingTemplate);
+            replacingTemplate.style.display= 'block'}; 
 		},
+       
 	});
 
 

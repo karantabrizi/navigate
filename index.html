@@ -12,10 +12,7 @@
     <script type="application/javascript" src="/customerDetailsWidget.js"></script>
     <script type="application/javascript" src="/newWidget.js"></script>
     <script type="application/javascript" src="/Navigate.js"></script>    
-    <!--<script type="application/javascript" src="/ContactWidget.js"></script>
-    <script type="application/javascript" src="/TestScoreWidget.js"></script>
-    <script type="application/javascript" src="/UISwitchListener.js"></script>
-    <script type="application/javascript" src="/contact.json"></script>-->
+    
 
     </head>
 
@@ -33,10 +30,12 @@
             $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser
                 var Navigate = new Clazz.Navigate();
                 document.Navigate = Navigate.Navigate;
+                document.history=[];
 
                 var addToCartWidget = new Clazz.addToCartWidget(document.config);
                 var addToCartWidgetContainer = document.getElementById("addToCartWidgetContainer");
                 addToCartWidget.render(addToCartWidgetContainer);
+                document.history.push("firstPage");
             });
         </script>
     </body>

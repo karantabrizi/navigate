@@ -7,7 +7,6 @@ Clazz.customerDetailsWidget = Clazz.extend(
         },
     
         bindUI: function() {
-            //this = self;
     
             var y = function() {
                 var newWidget = new Clazz.newWidget(document.config);

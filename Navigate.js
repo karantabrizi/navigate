@@ -4,16 +4,19 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
     this.config= config;
     },
     
-	 Navigate : function(tamplateContainer,replacingTemplate,widget){
+	 Navigate : function(tamplateContainer,replacingTemplate,widget,widgetName){
 		
-		window.location.hash = "widget"
-   
-/*		var tamplateContainer= document.getElementBId("tamplateContainer");
-		$(tamplateContainer).display= 'none';
-    
-		var widget = new Clazz.widget(config);
-		var replacingTemplate= document.getElementBId(replacingTemplate);
-		widget.render(container);*/
+		window.location.hash = widgetName
+        
+        console.log(tamplateContainer);
+        console.log(replacingTemplate);
+        console.log(widget);
+         
+		var tamplateContainer= document.getElementById(tamplateContainer);
+		tamplateContainer.style.display= 'none';
+
+		var replacingTemplate= document.getElementById(replacingTemplate);
+		widget.render(replacingTemplate); 
 
 		
 

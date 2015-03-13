@@ -10,7 +10,8 @@ Clazz.customerDetailsWidget = Clazz.extend(
             //this = self;
     
             var y = function() {
-                document.Navigate("customerDetailsWidgetContainer","newWidgetContainer","newWidget")};
+                var newWidget = new Clazz.newWidget(document.config);
+                document.Navigate("customerDetailsWidgetContainer","newWidgetContainer",newWidget,"newPage")};
             
     
             $("#forwardButton").click(y);

@@ -9,8 +9,8 @@ Clazz.newWidget = Clazz.extend(
         bindUI: function() {
     
             var y = function() {
-                var addToCartWidget = new Clazz.addToCartWidget(document.config);
-                document.Navigate("newWidgetContainer","customerDetailsWidgetContainer",addToCartWidget,"firstPage")};
+                var thirdWidget = new Clazz.thirdWidget(document.config);
+                document.Navigate("newWidgetContainer","thirdWidgetContainer",thirdWidget,"thirdPage")};
             
     
             $("#forwardButton2").click(y);

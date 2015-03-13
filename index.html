@@ -12,7 +12,7 @@
     <script type="application/javascript" src="/customerDetailsWidget.js"></script>
     <script type="application/javascript" src="/newWidget.js"></script>
     <script type="application/javascript" src="/Navigate.js"></script>    
-    
+    <script type="application/javascript" src="/thirdWidget.js"></script> 
 
     </head>
 
@@ -31,7 +31,7 @@
                 var Navigate = new Clazz.Navigate();
                 document.Navigate = Navigate.Navigate;
                 document.history=[];
-
+                
                 var addToCartWidget = new Clazz.addToCartWidget(document.config);
                 var addToCartWidgetContainer = document.getElementById("addToCartWidgetContainer");
                 addToCartWidget.render(addToCartWidgetContainer);

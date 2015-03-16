@@ -7,11 +7,11 @@
     <script type="application/javascript" src="/Widget.js"></script>
     <script type="application/javascript" src="/TemplateProvider.js"></script>
     <script type="application/javascript" src="/WidgetWithTemplate.js"></script>
-    <script type="application/javascript" src="/addToCartWidget.js"></script>
-    <script type="application/javascript" src="/headerWidget.js"></script>
-    <script type="application/javascript" src="/customerDetailsWidget.js"></script>
-    <script type="application/javascript" src="/newWidget.js"></script>
-    <script type="application/javascript" src="/Navigate.js"></script>    
+    <script type="application/javascript" src="/page1MainWidget.js"></script>
+    <script type="application/javascript" src="/headerwidget.js"></script>
+    <script type="application/javascript" src="/page1contentwidget.js"></script>
+    <script type="application/javascript" src="/page2ContentWidget.js"></script>
+    <script type="application/javascript" src="/Router.js"></script>
     
 
     </head>
@@ -24,18 +24,18 @@
         }
     </script>
         
-        <div id="addToCartWidgetContainer"></div>
+        <div id="page1MainContainer"></div>
         
         <script type="application/javascript">
-            $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser
-                var Navigate = new Clazz.Navigate();
-                document.Navigate = Navigate.Navigate;
-                document.history=[];
-
-                var addToCartWidget = new Clazz.addToCartWidget(document.config);
-                var addToCartWidgetContainer = document.getElementById("addToCartWidgetContainer");
-                addToCartWidget.render(addToCartWidgetContainer);
-                document.history.push("firstPage");
+            $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser         
+                var map = new Map();
+                var Router = new Clazz.Router();
+                document.Navigate = Router.Navigate;
+                var page1MainWidget = new Clazz.page1MainWidget(document.config);
+                var page1MainContainer = document.getElementById("page1MainContainer");
+                page1MainWidget.render(page1MainContainer);
+                window.location.hash = "test";
+                    map.set(window.location.hash.substr(),"page1content");
             });
         </script>
     </body>

@@ -1,4 +1,4 @@
-Clazz.Navigate = Clazz.extend(Clazz.Base,{
+Clazz.Router = Clazz.extend(Clazz.Base,{
 
     initialize: function(config){
     this.config= config;
@@ -6,10 +6,13 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
     
 	 Navigate : function(tamplateContainer,replacingTemplate,widget,widgetName){
 		
+        // if(
+         
 		window.location.hash = widgetName
         
         
         if(document.history.indexOf(widgetName)===-1){
+            
                 document.history.push(widgetName);
                 
                 var tamplateContainer= document.getElementById(tamplateContainer);
@@ -33,8 +36,6 @@ Clazz.Navigate = Clazz.extend(Clazz.Base,{
 window.history.pushstate(navigateData)
 var a = array.indexOf("widgetName")
 window.onpopstate = function () {}
-
-
 /*Req.:
 - clear the template which needs to be switched (can be one of the inputs)
 - call the template to replace the old one (the second input)

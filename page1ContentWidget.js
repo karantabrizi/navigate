@@ -3,6 +3,7 @@ Clazz.page1ContentWidget = Clazz.extend(
         initialize : function(config){
             this.templateUrl = "page1Content.html";
         },
+        
         bindUI: function() {
             var y = function() {
                 document.Navigate("page2")

@@ -3,9 +3,8 @@ Clazz.page2ContentWidget = Clazz.extend(
         
         initialize : function(config){
             this.templateUrl = "page2Content.html";
-            $.getJSON("data.json",Function(data)){
+            $.getJSON("/data.json",Function(data))
                 renderFunction(data,whereToRender);
-            }
         },
         
         preRender: function(whereToRender, renderFunction) {

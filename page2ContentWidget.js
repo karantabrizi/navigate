@@ -1,9 +1,8 @@
 Clazz.page2ContentWidget = Clazz.extend(
     Clazz.WidgetWithTemplate,{
         
-        initialize : function(data){
+        initialize : function(config){
             this.templateUrl = "page2Content.html";
-            this.data = data;
         },
         bindUI: function() {
             var y = function() {

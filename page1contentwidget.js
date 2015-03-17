@@ -1,8 +1,8 @@
-Clazz.page1contentwidget = Clazz.extend(
+Clazz.page1ContentWidget = Clazz.extend(
     Clazz.WidgetWithTemplate,{
         
         initialize : function(config){
-            this.templateUrl = "page1content.html";
+            this.templateUrl = "page1Content.html";
             this.config = config.data;
         },
         
@@ -11,7 +11,7 @@ Clazz.page1contentwidget = Clazz.extend(
     
             var y = function() {
                 
-                document.Navigate("customerDetailsWidgetContainer","newWidgetContainer",newWidget,"newPage")
+                document.Navigate("page2")
             };
             
     

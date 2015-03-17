@@ -8,7 +8,6 @@ Clazz.page1MainWidget = Clazz.extend(  //extend will add the two together
 
         },
         
-        
         postRender : function(){
         var page1contentwidget = new Clazz.page1contentwidget (this.data);
         var page1content = document.getElementById("page1content");

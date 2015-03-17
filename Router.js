@@ -4,30 +4,13 @@ Clazz.Router = Clazz.extend(Clazz.Base,{
     this.config= config;
     },
     
-	 Navigate : function(tamplateContainer,replacingTemplate,widget,widgetName){
-		
-        // if(
-         
-		window.location.hash = widgetName
-        
-        
-        if(document.history.indexOf(widgetName)===-1){
-            
-                document.history.push(widgetName);
-                
-                var tamplateContainer= document.getElementById(tamplateContainer);
-                tamplateContainer.style.display= 'none';
-        
-                var replacingTemplate= document.getElementById(replacingTemplate);
-                widget.render(replacingTemplate); 
-        }
-        else {
-            var tamplateContainer= document.getElementById(tamplateContainer);
-            tamplateContainer.style.display= 'none';
-            
-            var replacingTemplate= document.getElementById(replacingTemplate);
-            replacingTemplate.style.display= 'block'}; 
-		},
+	 Navigate : function(key){
+         var widgetName  = document.map.get(key);
+         console.log(widgetName.valueOf());
+         var page1MainWidget = new Clazz.document.map.get(key)  ();
+            var container = document.getElementById("page1content");
+            page1MainWidget.render(container);
+     }
        
 	});
 

@@ -18,8 +18,10 @@
     <body>
     <script>
         document.config = {
-            data: {
-            "name" : "Karan"}
+            map:{
+                "page1":"Clazz.page1ContentWidget",
+                "page2":"Clazz.page2ContentWidget"
+            }
         }
     </script>
         
@@ -27,15 +29,12 @@
         
         <script type="application/javascript">
             $(document).ready(function(){ //called when browser loads all the resource you need a $ to load the script inside the browser         
-                var map = new Map();
                 var Router = new Clazz.Router();
                 document.Navigate = Router.Navigate;
-                var page1MainWidget = new Clazz.page1MainWidget(document.config);
+                var page1MainWidget = new window.["{{page1}}"](document.config);
                 var page1MainContainer = document.getElementById("page1MainContainer");
                 page1MainWidget.render(page1MainContainer);
-                window.location.hash = "test";
-                    map.set(window.location.hash.substr(),"page1content");
-
+                
             });
         </script>
     </body>

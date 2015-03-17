@@ -1,18 +1,19 @@
 Clazz.Router = Clazz.extend(Clazz.Base,{
-
     initialize: function(config){
-    this.config= config;
+        this.config= config;
     },
-    
-	 Navigate : function(key){
-         var widgetName  = document.map.get(key);
-         console.log(widgetName.valueOf());
-         var page1MainWidget = new Clazz.document.map.get(key)  ();
-            var container = document.getElementById("page1content");
-            page1MainWidget.render(container);
-     }
-       
-	});
+    Navigate : function(key){
+        // get the widget name for a particular key
+        var widgetTypeName  = this.config.map[key];
+        console.log(widgetTypeName);
+        // get the default container from the config
+        var container = document.getElementById(this.config.container);
+        // instantiate the widget from the widgetname
+        var widgetToRender = window[widgetTypeName];
+        // render the widget in the container
+        widgetToRender.render(container);
+     }  
+});
 
 
 /*

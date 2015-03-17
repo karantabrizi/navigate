@@ -5,15 +5,10 @@ Clazz.page2ContentWidget = Clazz.extend(
             this.templateUrl = "page2Content.html";
             this.data = data;
         },
-        
         bindUI: function() {
-    
             var y = function() {
-                var page1widget = new Clazz.page1MainWidget(document.config);
-                //document.Navigate("newWidgetContainer","customerDetailsWidgetContainer",addToCartWidget,"firstPage")
+                document.Navigate("page1")
             };
-            
-    
-            $("#forwardButton2").click(y);
-            }
+            $("#backButton").click(y);
+       }
 });
